@@ -5,16 +5,25 @@
 
 li.menu-link a {
 	font-family: "Muli", Helvetica, sans-serif;
-	font-size: 12pt;
-	color: rgba(255, 255, 255, 0.4);
+	font-size: 1em;
+	color: rgba(255, 255, 255, 0.5);
 	line-height: 30px;
 	border-bottom: none;
 }
 
 li.menu-link a.active {
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(255, 255, 255, 1);
 }
 
 div.inner h2 {
-	color:#49bf9d !important;
+	color:rgba(255, 255, 255, 1) !important;
+}
+
+header.major h4 {
+	font-weight: 500;
+}
+
+/* Add padding to the bottom of the contacts so the active menu works */
+#contact {
+	padding-bottom: 12em !important;
 }
