@@ -9,6 +9,13 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+}
+
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -1824,10 +1831,10 @@ input, select, textarea {
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		background: #f2f2f2;
+		background: #f7f7f7;
 		border-radius: 0.35em;
 		border: solid 2px transparent;
-		color:#3c4043;
+		color: inherit;
 		display: block;
 		outline: 0;
 		padding: 0 0.75em;
@@ -1864,7 +1871,7 @@ input, select, textarea {
 
 		select option {
 			color: #787878;
-			background: #fff;
+			background: f2f2f2;
 		}
 
 		select:focus::-ms-value {
@@ -1966,22 +1973,22 @@ input, select, textarea {
 	}
 
 	::-webkit-input-placeholder {
-		color: #787878 !important;
+		color: #b2b2b2 !important;
 		opacity: 1.0;
 	}
 
 	:-moz-placeholder {
-		color: #787878 !important;
+		color: #b2b2b2 !important;
 		opacity: 1.0;
 	}
 
 	::-moz-placeholder {
-		color: #787878 !important;
+		color: #b2b2b2 !important;
 		opacity: 1.0;
 	}
 
 	:-ms-input-placeholder {
-		color: #787878 !important;
+		color: #b2b2b2 !important;
 		opacity: 1.0;
 	}
 
@@ -2453,8 +2460,8 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 2px #f2f2f2;
-		color: #787878 !important;
+		border: solid 2px #efefef;
+		color: #92969b !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2650,6 +2657,15 @@ input, select, textarea {
 			margin: 0 0 1em 0;
 			width: 6.25em;
 		}
+
+/* Inner */
+	.inner {
+		display: block;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+	}
 
 /* Footer */
 
@@ -3061,16 +3077,21 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				background-attachment: scroll;
+				background-attachment: fixed; /* Changed from scroll */
 				background-position: top left, center center;
 				background-size: auto,		cover;
+				background-repeat: repeat, no-repeat; /* Added */
+				height: auto;
 				left: auto;
-				padding: 6em 4em;
-				position: relative;
-				text-align: center;
 				top: auto;
+
+				padding: 0em 4em; /* Changed from 6em 4em */
+				position: fixed; /* Changed from releative */
+				text-align: right; /* Changed from center */
 				width: 100%;
-				display: block;
+
+				display: block; /* Changed from block */
+				z-index: 10; /* Added */
 			}
 
 				#header h1 {
@@ -3080,6 +3101,14 @@ input, select, textarea {
 					#header h1 br {
 						display: inline;
 					}
+
+		/* Inner */
+			.inner {
+				display: -moz-flex;
+				display: -webkit-flex;
+				display: -ms-flex;
+				display: flex;
+			}
 
 		/* Footer */
 
@@ -3134,9 +3163,9 @@ input, select, textarea {
 				font-size: 1.5em;
 			}
 
-			h2 {
+			/*h2 {
 				font-size: 1.2em;
-			}
+			}*/
 
 			h3 {
 				font-size: 1em;

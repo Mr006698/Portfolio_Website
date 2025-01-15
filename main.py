@@ -7,6 +7,11 @@ def index() -> str:
     return render_template('index.html', year=date.today().strftime('%Y'))
 
 
+@app.route('/cv')
+def cv() -> str:
+    return render_template('cv.html', year=date.today().strftime('%Y'))
+
+
 @app.route('/projects')
 def projects() -> str:
     #return render_template('projects.html')

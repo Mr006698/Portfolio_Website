@@ -1,3 +1,4 @@
+/* CSS - JAVASCRIPT MENU BAR */
 .menu-list {
     list-style: none;
 	color: rgba(255, 255, 255, 0.4);
@@ -15,12 +16,62 @@ li.menu-link a.active {
 	color: rgba(255, 255, 255, 1);
 }
 
+/* FORMATTING OPTIONS */
 div.inner h2 {
 	color:rgba(255, 255, 255, 1) !important;
+	padding-top: 0em;
+	margin-bottom: 0;
 }
 
 header.major h4 {
 	font-weight: 500;
+}
+
+/* ICON */
+.menu-btn {
+	background-color: transparent;
+	border: none;
+	padding: 1em 0em 1em 0em;
+	color: rgba(255, 255, 255, 1);
+	cursor: pointer;
+}
+
+.menu-btn:hover {
+	color: #49bf9d;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+
+  font-size: 2.5em !important;
+}
+
+@media screen and not (max-width: 980px) {
+	.menu-btn {
+		display: none;
+	}
+
+	.show {
+		display: inline;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.menu-btn {
+		display: inline;
+	}
+
+	.show {
+		display: none;
+	}
+
+	div.inner h2 {
+		padding-top: 0.2em;
+	}
 }
 
 /* Add padding to the bottom of the contacts so the active menu works */
