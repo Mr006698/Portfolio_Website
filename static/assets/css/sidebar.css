@@ -58,6 +58,14 @@ header.major h4 {
 	.show {
 		display: inline;
 	}
+
+	#main>section {
+		scroll-margin-top: 60px;
+	}
+
+	#main>section:first-child {
+		scroll-margin-top: 130px;
+	}
 }
 
 @media screen and (max-width: 980px) {
@@ -72,9 +80,17 @@ header.major h4 {
 	div.inner h2 {
 		padding-top: 0.2em;
 	}
+
+	#main>section {
+		scroll-margin-top: 30px;
+	}
+
+	#main>section:first-child {
+		scroll-margin-top: 100px;
+	}
 }
 
 /* Add padding to the bottom of the contacts so the active menu works */
 #contact {
-	padding-bottom: 12em !important;
+	padding-bottom: 15em !important;
 }
