@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from datetime import date
+import smtplib
 
 app = Flask(__name__)
 @app.route('/')

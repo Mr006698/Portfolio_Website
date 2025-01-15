@@ -171,4 +171,4 @@ cython_debug/
 # MY FILES
 
 # Don't include cv
-Parker_David_CV_Final.pdf
+*.pdf
