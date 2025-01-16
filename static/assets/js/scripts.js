@@ -7,45 +7,24 @@
 // Scripts
 // 
 
-/*
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const sideNav = document.body.querySelector('#sideNav');
-    if (sideNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponse .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
-
-});*/
-
 // Toggle the menu when the user clicks the button
 function openMenu() {
-    document.getElementById("menuDropdown").classList.toggle("show")
+    menu = document.getElementById("menuDropdown");
+    height = menu.offsetHeight;
+    if (height == 0) {
+        menu.style.height = "200px"; // This will need adjusting if menu items added.
+    }
+    else {
+        menu.style.height = "0px";
+    }
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches(".material-symbols-rounded")) {
         var menu = document.getElementById("menuDropdown");
-        if (!menu.classList.contains('show')) {
-            menu.classList.add('show');
-        }
+        menu.style.padding = "0em 0em 0em 0em";
+        menu.style.height = "0px";
     }
 }
 

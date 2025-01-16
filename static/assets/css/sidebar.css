@@ -1,23 +1,5 @@
-/* CSS - JAVASCRIPT MENU BAR */
-.menu-list {
-    list-style: none;
-	color: rgba(255, 255, 255, 0.4);
-	padding-bottom: 1em;
-}
-
-li.menu-link a {
-	font-family: "Muli", Helvetica, sans-serif;
-	font-size: 1em;
-	color: rgba(255, 255, 255, 0.5);
-	line-height: 30px;
-	border-bottom: none;
-}
-
-li.menu-link a.active {
-	color: rgba(255, 255, 255, 1);
-}
-
 /* FORMATTING OPTIONS */
+
 div.inner h2 {
 	color:rgba(255, 255, 255, 1) !important;
 	padding-top: 0em;
@@ -28,7 +10,23 @@ header.major h4 {
 	font-weight: 500;
 }
 
-/* ICON */
+/* CSS - JAVASCRIPT MENU BAR */
+
+li.menu-link a {
+	font-family: "Muli", Helvetica, sans-serif;
+	font-size: 1em;
+	color: rgba(255, 255, 255, 0.5);
+	line-height: 30px;
+	border-bottom: none;
+
+	transition: 0.0s; /* For slide menu */
+}
+
+li.menu-link a.active {
+	color: rgba(255, 255, 255, 1);
+}
+
+/* Icon */
 .menu-btn {
 	background-color: transparent;
 	border: none;
@@ -51,6 +49,29 @@ header.major h4 {
   font-size: 2.5em !important;
 }
 
+/* XXLarge */
+.menu-btn {
+	display: none;
+}
+
+.menu-list {
+	list-style: none;
+	color: rgba(255, 255, 255, 0.4);
+	padding: 0em;
+	margin: 0em;
+	height: auto; /* For slide menu */
+	overflow-y: visible; /* For slide menu */
+	transition: 0.0s; /* For slide menu */
+}
+
+#main>section {
+	scroll-margin-top: 84px;
+}
+
+#main>section:first-child {
+	scroll-margin-top: 174px;
+}
+
 /* XLarge */
 @media screen and (max-width: 1800px) {
 
@@ -58,8 +79,12 @@ header.major h4 {
 		display: none;
 	}
 
-	.show {
-		display: inline;
+	.menu-list {
+		padding: 0em;
+		margin: 0em;
+		height: auto; /* For slide menu */
+		overflow-y: visible; /* For slide menu */
+		transition: 0.0s; /* For slide menu */
 	}
 
 	#main>section {
@@ -78,8 +103,12 @@ header.major h4 {
 		display: none;
 	}
 
-	.show {
-		display: inline;
+	.menu-list {
+		padding: 0em;
+		margin: 0em;
+		height: auto; /* For slide menu */
+		overflow-y: visible; /* For slide menu */
+		transition: 0.0s; /* For slide menu */
 	}
 
 	#main>section {
@@ -93,13 +122,14 @@ header.major h4 {
 
 /* Medium */
 @media screen and (max-width: 980px) {
-	
 	.menu-btn {
 		display: inline;
 	}
 
-	.show {
-		display: none;
+	.menu-list {
+		height: 0px; /* Close the menu bar */
+		overflow-y: hidden; /* For slide menu */
+		transition: 0.4s; /* For slide menu */
 	}
 
 	div.inner h2 {
@@ -118,13 +148,15 @@ header.major h4 {
 
 /* Small */
 @media screen and (max-width: 736px) {
-
+	
 	.menu-btn {
 		display: inline;
 	}
 
-	.show {
-		display: none;
+	.menu-list {
+		height: 0px; /* Close the menu bar */
+		overflow-y: hidden; /* For slide menu */
+		transition: 0.4s; /* For slide menu */
 	}
 
 	div.inner h2 {
@@ -140,7 +172,8 @@ header.major h4 {
 	}
 }
 
-/* Add padding to the bottom of the contacts so the active menu works */
+/* Add padding to the bottom of the contacts segment so the active menu scrolls high enough
+   TODO: this will need adjusting for different screen sizes */
 #contact {
 	padding-bottom: 15em !important;
 }
