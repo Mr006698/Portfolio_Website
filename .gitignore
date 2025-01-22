@@ -167,8 +167,3 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# MY FILES
-
-# Don't include cv
-*.pdf

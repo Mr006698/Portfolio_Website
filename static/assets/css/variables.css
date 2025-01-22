@@ -1,0 +1,18 @@
+/* Colour variables */
+:root {
+    --section-header-colour: #3c4043;
+    --section-paragraph-colour: #45494b; /*#4B4F52;*/
+    --menu-header-colour: #fff;
+    --menu-link-active-colour: #fff;
+    --menu-link-colour: rgba(255, 255, 255, 0.4);
+    --menu-link-hover-colour: #49bf9d;
+    --menu-button-colour: #fff;
+    --menu-button-hover-colour: #49bf9d;
+    --button-border-colour: #e2e4e6;
+    --button-text-colour: #9a9d9e;
+    --button-hover-colour: #49bf9d;
+    --input-background-colour: #f7f7f7;
+    --input-placeholder-colour: #b2b2b2;
+    --input-text-colour: #000;
+    --input-focus-colour: #49bf9d;
+}

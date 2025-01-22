@@ -1,7 +1,9 @@
 {% include 'header.html' %}
+{% include 'modal.html' %}
 
 <!-- Main -->
 <div id="main">
+
 	<!-- One -->
 	<section id="about">
 		<header class="major">
@@ -19,7 +21,7 @@
 		</p>
 		</ul>
 		<ul class="actions">
-			<li><a href="{{ url_for('cv') }}" class="button">Download CV</a></li>
+			<li><a href="{{ url_for('static', filename='files/Parker_David_CV_General.pdf') }}" download class="button">Download CV</a></li>
 		</ul>
 	</section>
 
@@ -50,6 +52,7 @@
 			<li>Used Tulip to record and manage production performance metrics.</li>
 			<li>Collaborated with colleagues to develop solutions to any manufacturing problems.</li>
 			<li>Developed strong substantial experience operating Fanuc industrial robots.</li>
+			<li>Repeatedly delivered 100% success across all performance metrics.</li>
 		</ul>
 		<header class="major">
 			<h4>MACHINE AND PREP TECHNICIAN - TECMAN – 2019 - 2022</h4>
@@ -117,28 +120,16 @@
 		</header>
 		<div class="row">
 			<article class="col-6 col-12-xsmall work-item">
-				<a href="static/images/fulls/01.jpg" class="image fit thumb"><img src="static/images/thumbs/01.jpg"
+				<a href="#" class="image fit thumb"><img src="static/images/thumbs/01.jpg"
 						alt="" /></a>
 				<h3>Lottery Results Analysis</h3>
 				<p>Statistical analysis of lottery numbers using Beautiful Soup, Pandas and NumPy.</p>
 			</article>
 			<article class="col-6 col-12-xsmall work-item">
-				<a href="static/images/fulls/02.jpg" class="image fit thumb"><img src="static/images/thumbs/02.jpg"
+				<a href="#" class="image fit thumb"><img src="static/images/thumbs/02.jpg"
 						alt="" /></a>
-				<h3>Ultricies lacinia interdum</h3>
-				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="col-6 col-12-xsmall work-item">
-				<a href="static/images/fulls/03.jpg" class="image fit thumb"><img src="static/images/thumbs/03.jpg"
-						alt="" /></a>
-				<h3>Tortor metus commodo</h3>
-				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-			</article>
-			<article class="col-6 col-12-xsmall work-item">
-				<a href="static/images/fulls/04.jpg" class="image fit thumb"><img src="static/images/thumbs/04.jpg"
-						alt="" /></a>
-				<h3>Quam neque phasellus</h3>
-				<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+				<h3>Coming Soon</h3>
+				<p>Projects In Progress.</p>
 			</article>
 		</div>
 		<ul class="actions">
@@ -155,18 +146,16 @@
 			methods listed below. I will do my best to respond promptly to all inquiries.</p>
 		<div class="row">
 			<div class="col-8 col-12-small">
-				<form method="post" action="#">
+				<form method="POST", action="{{ url_for('index') }}" id="contact-form">
+					{{ form.csrf_token }}
 					<div class="row gtr-uniform gtr-50">
-						<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" />
-						</div>
-						<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
-								placeholder="Email" /></div>
-						<div class="col-12"><textarea name="message" id="message" placeholder="Message"
-								rows="4"></textarea></div>
+						<div class="col-6 col-12-xsmall">{{ form.name }}</div>
+						<div class="col-6 col-12-xsmall">{{ form.email }}</div>
+						<div class="col-12">{{ form.message(rows=4) }}</div>
 					</div>
 				</form>
 				<ul class="actions">
-					<li><input type="submit" value="Send Message" /></li>
+					<li>{{ form.submit }}</li>
 				</ul>
 			</div>
 			<div class="col-4 col-12-small">

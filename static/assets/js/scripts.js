@@ -20,13 +20,13 @@ function openMenu() {
 }
 
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.addEventListener('click', function(event) {
     if (!event.target.matches(".material-symbols-rounded")) {
         var menu = document.getElementById("menuDropdown");
         menu.style.padding = "0em 0em 0em 0em";
         menu.style.height = "0px";
     }
-}
+})
 
 // Activate menu link on scroll
 let sections = document.querySelectorAll('section');
@@ -47,3 +47,25 @@ window.onscroll = () => {
         };
     })
 };
+
+// Get the modal
+modal = document.getElementById("message-modal");
+closeModal = document.getElementById("modal-close");
+
+// window.setTimeout(() => {
+//     modal.showModal();
+// }, 1000);
+
+// Close the modal when the user clicks close
+closeModal.onclick = function() {
+    // modal.style.display = "none";
+    modal.close();
+}
+
+// Close the modal if the user clicks outside
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        // modal.style.display = "none";
+        modal.close();
+    }
+});

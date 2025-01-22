@@ -1,9 +1,22 @@
 /* FORMATTING OPTIONS */
 
-div.inner h2 {
-	color:rgba(255, 255, 255, 1) !important;
-	padding-top: 0em;
+div.menu-title {
+	margin-bottom: 0.8em;
+	display: flex;
+	flex-direction: column;
+}
+
+div.menu-title h2 {
+	color: var(--menu-header-colour) !important;
+	padding: 0em 0em 0em 0em;
 	margin-bottom: 0;
+}
+
+div.menu-title h6 {
+	font-size: 0.82em;
+	margin: 0em 0em 0em 0em;
+	padding: 0em 0em 0em 0em;
+	color: var(--menu-link-colour) !important;
 }
 
 header.major h4 {
@@ -15,15 +28,15 @@ header.major h4 {
 li.menu-link a {
 	font-family: "Muli", Helvetica, sans-serif;
 	font-size: 1em;
-	color: rgba(255, 255, 255, 0.5);
-	line-height: 30px;
+	color: var(--menu-link-colour);
+	line-height: 1.5em;
 	border-bottom: none;
 
 	transition: 0.0s; /* For slide menu */
 }
 
 li.menu-link a.active {
-	color: rgba(255, 255, 255, 1);
+	color: var(--menu-link-active-colour);
 }
 
 /* Icon */
@@ -31,12 +44,12 @@ li.menu-link a.active {
 	background-color: transparent;
 	border: none;
 	padding: 1em 0em 1em 0em;
-	color: rgba(255, 255, 255, 1);
+	color: var(--menu-button-colour);
 	cursor: pointer;
 }
 
 .menu-btn:hover {
-	color: #49bf9d;
+	color: var(--menu-button-hover-colour);
 }
 
 .material-symbols-rounded {
@@ -56,7 +69,7 @@ li.menu-link a.active {
 
 .menu-list {
 	list-style: none;
-	color: rgba(255, 255, 255, 0.4);
+	color: var(--menu-link-colour);
 	padding: 0em;
 	margin: 0em;
 	height: auto; /* For slide menu */
@@ -88,7 +101,7 @@ li.menu-link a.active {
 	}
 
 	#main>section {
-		scroll-margin-top: 60px;
+		scroll-margin-top: 62px;
 	}
 
 	#main>section:first-child {
@@ -122,6 +135,20 @@ li.menu-link a.active {
 
 /* Medium */
 @media screen and (max-width: 980px) {
+
+	div.menu-title {
+		margin-bottom: 0.0em;
+		flex-direction: row;
+	}
+
+	div.menu-title h2 {
+		padding: 0.2em 0em 0em 0em;
+	}
+
+	div.menu-title h6 {
+		padding: 2.1em 0em 0em 1em;
+	}
+
 	.menu-btn {
 		display: inline;
 	}
@@ -130,10 +157,6 @@ li.menu-link a.active {
 		height: 0px; /* Close the menu bar */
 		overflow-y: hidden; /* For slide menu */
 		transition: 0.4s; /* For slide menu */
-	}
-
-	div.inner h2 {
-		padding-top: 0.2em;
 	}
 
 	#main>section {
@@ -148,6 +171,14 @@ li.menu-link a.active {
 
 /* Small */
 @media screen and (max-width: 736px) {
+
+	div.inner h2 {
+		padding: 0.2em 0em 0em 0em;
+	}
+
+	div.menu-title h6 {
+		display: none;
+	}
 	
 	.menu-btn {
 		display: inline;
@@ -172,8 +203,25 @@ li.menu-link a.active {
 	}
 }
 
-/* Add padding to the bottom of the contacts segment so the active menu scrolls high enough
-   TODO: this will need adjusting for different screen sizes */
-#contact {
-	padding-bottom: 15em !important;
+/* XSmall */
+
+@media screen and (max-width: 480px) {
+
+	div.inner h2 {
+		padding: 0.4em 0em 0em 0em;
+		font-size: 1.7em;
+	}
+}
+
+#main>section:last-child {
+	height: 100vh; /* Make the last segment the size of the page */
+}
+
+/* Form input */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+	font-size: 0.9em;
 }
