@@ -1,18 +1,27 @@
 /* Colour variables */
 :root {
     --section-header-colour: #3c4043;
-    --section-paragraph-colour: #45494b; /*#4B4F52;*/
+    --section-paragraph-colour: #45494b;
     --menu-header-colour: #fff;
     --menu-link-active-colour: #fff;
     --menu-link-colour: rgba(255, 255, 255, 0.4);
-    --menu-link-hover-colour: #49bf9d;
+    --menu-link-hover-colour: #00AC92;
     --menu-button-colour: #fff;
-    --menu-button-hover-colour: #49bf9d;
+    --menu-button-hover-colour: #00AC92;
     --button-border-colour: #e2e4e6;
     --button-text-colour: #9a9d9e;
     --button-hover-colour: #49bf9d;
     --input-background-colour: #f7f7f7;
     --input-placeholder-colour: #b2b2b2;
     --input-text-colour: #000;
-    --input-focus-colour: #49bf9d;
+    --input-focus-colour: #00AC92;
+
+    /* --background-gradient: #19191f, #1c1d23, #1f2126, #22252a, #25292d, #2c3034, #32373c, #393e43, #444a50, #50565e, #5c636c, #69707b; */
+    --background-gradient: #0a0b0c, #0f0d0e, #181618, #1f1d21, #25252a, #2b2d33, #31353b, #373d44, #3f474e, #485258, #515c62, #5a676c;
+    /* --background-gradient: #1f1d21, #5a676c; */
+    /* --background-gradient: #1C1F21, #232628, #2a2d2f, #313437, #383b3e, #3f4245, #45484b, #4c4f52, #54575a, #5c5f62, #64686a, #6c7072; */
+    /* --background-gradient: #0a0b0c, #141515, #1b1c1d, #232324, #2a2b2c, #313233, #383a3a, #404141, #484949, #515252, #595a5a, #626363; */
+    --background-gradient-base: #0a0b0c;
+
+    /* --background-gradient: #171a1c, #1b1d20, #1e2124, #222428, #26282c, #2a2c31, #2f3136, #33353b, #3a3b42, #41424a, #484851, #4f4f59; */
 }

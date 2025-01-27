@@ -16,7 +16,7 @@ div.menu-title h6 {
 	font-size: 0.82em;
 	margin: 0em 0em 0em 0em;
 	padding: 0em 0em 0em 0em;
-	color: var(--menu-link-colour) !important;
+	color: var(--button-border-colour) !important;
 }
 
 header.major h4 {
@@ -33,6 +33,10 @@ li.menu-link a {
 	border-bottom: none;
 
 	transition: 0.0s; /* For slide menu */
+}
+
+li.menu-link a:hover {
+	color: var(--menu-link-hover-colour);
 }
 
 li.menu-link a.active {
@@ -214,6 +218,7 @@ li.menu-link a.active {
 }
 
 #main>section:last-child {
+	/* Maybe tidy up with css mod() function */
 	height: 100vh; /* Make the last segment the size of the page */
 }
 

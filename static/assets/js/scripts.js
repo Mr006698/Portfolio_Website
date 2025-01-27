@@ -1,12 +1,3 @@
-/*!
-* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 // Toggle the menu when the user clicks the button
 function openMenu() {
     menu = document.getElementById("menuDropdown");
@@ -52,10 +43,6 @@ window.onscroll = () => {
 modal = document.getElementById("message-modal");
 closeModal = document.getElementById("modal-close");
 
-// window.setTimeout(() => {
-//     modal.showModal();
-// }, 1000);
-
 // Close the modal when the user clicks close
 closeModal.onclick = function() {
     // modal.style.display = "none";
@@ -69,3 +56,18 @@ window.addEventListener('click', function(event) {
         modal.close();
     }
 });
+
+form = document.getElementById("contact-form")
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    fetch('/submit', {
+        method: 'POST',
+        body: formData
+    }).then(function(response) {
+        if (response.ok) {
+            form.reset();
+            modal.showModal();
+        }
+    });
+})
