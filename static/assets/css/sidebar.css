@@ -218,8 +218,9 @@ li.menu-link a.active {
 }
 
 #main>section:last-child {
-	/* Maybe tidy up with css mod() function */
-	height: 100vh; /* Make the last segment the size of the page */
+	/* 100vh - 50% of containing element width calc(100vh - 50%)*/
+	/* Bit of a hack for now, this must be easier to do!! */
+	padding-bottom: clamp(0vh, 100vh - (100vh - 50%), 100vh);
 }
 
 /* Form input */
