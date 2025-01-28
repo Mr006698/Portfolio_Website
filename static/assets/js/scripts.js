@@ -39,24 +39,29 @@ window.onscroll = () => {
     })
 };
 
+// Scroll to the section when the user clicks the link
+function gotoByScroll(id) {
+    let element = document.getElementById(id);
+    element.scrollIntoView({behavior: "smooth"});
+}
+
 // Get the modal
 modal = document.getElementById("message-modal");
 closeModal = document.getElementById("modal-close");
 
 // Close the modal when the user clicks close
 closeModal.onclick = function() {
-    // modal.style.display = "none";
     modal.close();
 }
 
 // Close the modal if the user clicks outside
 window.addEventListener('click', function(event) {
     if (event.target == modal) {
-        // modal.style.display = "none";
         modal.close();
     }
 });
 
+// Process the form submission and prevent default behaviour
 form = document.getElementById("contact-form")
 form.addEventListener("submit", function(event) {
     event.preventDefault();
